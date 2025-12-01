@@ -91,20 +91,20 @@ def dunn_index(X, labels):
     if len(X) != len(labels):
         raise ValueError("Data (X) and labels must have the same length")
 
-    # 1. Organize points into clusters
+    # Organizing points into clusters
     clusters = _get_clusters(X, labels)
 
     if len(clusters) < 2:
         print("Warning: Dunn Index is not defined for a single cluster. Returning 0.")
         return 0.0
 
-    # 2. Calculate max intra-cluster (max cluster diameter)
+    # Calculating max intra-cluster (max cluster diameter)
     max_diameter = _calculate_max_intra_cluster_diameter(clusters)
 
-    # 3. Calculate min inter-cluster (min cluster separation)
+    # Calculating min inter-cluster (min cluster separation)
     min_separation = _calculate_min_inter_cluster_distance(clusters)
 
-    # 4. Calculate Dunn Index
+    # Calculate Dunn Index
     if max_diameter == 0:
         # Handle division by zero. This can happen if all clusters
         # have only one point.
