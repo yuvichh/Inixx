@@ -20,5 +20,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Yuvraj-cyborg/inixx"
-"Bug Tracker" = "https://github.com/Yuvraj-cyborg/inixx/issues"
+Homepage = "https://github.com/yuvichh/inixx"
+"Bug Tracker" = "https://github.com/yuvichh/inixx/issues"
